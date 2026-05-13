@@ -2133,6 +2133,32 @@ img {
 	padding:8px 20px;
 	font-size:12px; 
 }
+
+.homepage-hero-buttons {
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:center;
+	gap:16px;
+	margin-top:20px;
+}
+
+.homepage-hero-buttons .hs-button {
+	width:220px;
+	padding:14px 0;
+	box-sizing:border-box;
+}
+
+@media (max-width: 620px) {
+	.homepage-hero-buttons {
+		flex-direction:column;
+		align-items:center;
+	}
+
+	.homepage-hero-buttons .hs-button {
+		width:100%;
+		max-width:360px;
+	}
+}
 .hs-button-op.hs-button-md, .hs-button-opc.hs-button-md {
 	padding:6px 18px;
 }
