@@ -731,33 +731,34 @@ var checkForm = function(form) {
 				}
 			}
 			
-			// SEND FORM
+			sendparams._subject = "Website Form Completion - " + window.location.hostname;
+			sendparams._template = "table";
+			sendparams._captcha = "false";
+
 			var xhttp = new XMLHttpRequest();
 			xhttp.onreadystatechange = function() {
-				if (xhttp.readyState == XMLHttpRequest.DONE ) {
-					if (xhttp.status == 200) {
-						var returntext = xhttp.responseText;
-						if(returntext.substring(0,7) == 'ERROR: ') {
-							submitbutton.disabled = false;
-							var errormessage = returntext.substring(7);
-							// APPEND ERROR MESSAGE TO FORM
+				if (xhttp.readyState == XMLHttpRequest.DONE) {
+					var response = null;
+					try { response = JSON.parse(xhttp.responseText); } catch(e) {}
+					if (xhttp.status == 200 && response && (response.success === "true" || response.success === true)) {
+						if(typeof formsubmitfunction != "undefined") {
+							formsubmitfunction();
 						}
-						else {
-							if(typeof formsubmitfunction != "undefined") {
-								formsubmitfunction();
-							}
-							var sentmessage = document.createElement("div");
-							sentmessage.className = "hs-message-sent";
-							sentmessage.innerHTML = '<h5 class="mbottom">Message sent!</h5><p class="nombottom">Your message has been sent, a member of our team will get back to you as soon as possible!</p>';
-							form.parentNode.replaceChild(sentmessage, form);
-						}
+						var sentmessage = document.createElement("div");
+						sentmessage.className = "hs-message-sent";
+						sentmessage.innerHTML = '<h5 class="mbottom">Message sent!</h5><p class="nombottom">Your message has been sent, a member of our team will get back to you as soon as possible!</p>';
+						form.parentNode.replaceChild(sentmessage, form);
+					}
+					else {
+						submitbutton.disabled = false;
 					}
 				}
 			};
-		
-			xhttp.open("POST", "form-submission.php", true);
-			xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-			xhttp.send("data="+JSON.stringify(sendparams));
+
+			xhttp.open("POST", "https://formsubmit.co/ajax/fahro275@googlemail.com", true);
+			xhttp.setRequestHeader("Content-type", "application/json");
+			xhttp.setRequestHeader("Accept", "application/json");
+			xhttp.send(JSON.stringify(sendparams));
 		}
 		else {
 			submitbutton.disabled = null;	
