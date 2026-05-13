@@ -1,0 +1,22 @@
+/* Copyright (C) 2026 Eastway Digital Media Ltd - All Rights Reserved. */
+
+/* SITE INSTALLATION INSTRUCTIONS */
+
+REQUIREMENTS: A server running PHP
+
+- Once unzipped, the site will be fully functional in the correct server environment
+- Upload the contents of this folder to the root directory of the hosting space of your choice, via FTP or other means
+- Check your domain points to the IP address of your hosting server these files are uploaded to
+
+Please note: As you have opted to host these site files yourself, we are not obliged to complete this process on your behalf.
+
+Websites we build use paid premium system features that we have developed for our customers, by deciding not to continue to host your website with us, your right to use these paid premium features is revoked. Parts of your website that rely on these features have been adequately replaced with functional alternatives.
+
+Namely these include:
+- Photo gallery management
+- Reviews management
+- Complex form handling
+
+We are no longer responsible for alternations, maintenance or the upkeep for your website.
+
+Thank you for your custom, we are sorry to see you go and we hope you can continue growing your website and achieve your goals with it. Alternatively, if you do ever want to return, we have hosting and maintenance plans available to suit all types of businesses.
