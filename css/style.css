@@ -393,7 +393,7 @@ img {
 }
 
 #hs-header-logo {
-	max-width:308px;
+	max-width:365px;
 }
 #hs-header-logo .hs-header-item-content {
 	height:120px;
@@ -403,7 +403,7 @@ img {
 	/*height:52px;*/
 }
 .hs-header-fixed #hs-header-logo {
-	max-width: 288px;
+	max-width:340px;
 }
 
 #hs-header-logo img, .hs-header-widget img {
@@ -3070,7 +3070,7 @@ table tr td {
 	.hs-module-content-sm, .hs-module-content-xsm {padding:20px;}
 	
 	
-	#hs-header-logo {max-width:170px !important;}
+	#hs-header-logo {max-width:205px !important;}
 	
 	#hs-page-container {padding-top:62px !important;}
 	.hs-page-header {padding-top:62px !important; margin-top:-62px !important;}
